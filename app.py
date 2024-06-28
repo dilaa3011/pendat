@@ -67,6 +67,10 @@ if selected_color and selected_size and selected_act and selected_age:
     accuracy = accuracy_score(y, y_pred)
     st.write(f"Akurasi pada seluruh dataset: {accuracy * 100:.2f}%")
 
+    if df_new[0] == 0 :
+        st.write('balon mengembang')
+    else:
+        st.write('balon tidak mengembang')
     st.write('note :')
     st.write('1. Jika tabel Predicted menyatakan F maka balon akan mengembang')
     st.write('2. jika tabel Predicted menyatakan T maka balon tidak mengembang')
