@@ -65,5 +65,7 @@ if selected_color and selected_size and selected_act and selected_age:
     y_pred = model_rfc.predict(X)
     accuracy = accuracy_score(y, y_pred)
     st.write(f"Akurasi pada seluruh dataset: {accuracy * 100:.2f}%")
+    st.link_button('My Github','https://github.com/dilaa3011/pendat')
 else:
     st.sidebar.write("Silakan pilih nilai untuk semua fitur.")
+    st.link_button('My Github','https://github.com/dilaa3011/pendat')
