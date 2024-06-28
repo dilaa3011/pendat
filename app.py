@@ -67,7 +67,7 @@ if selected_color and selected_size and selected_act and selected_age:
     accuracy = accuracy_score(y, y_pred)
     st.write(f"Akurasi pada seluruh dataset: {accuracy * 100:.2f}%")
 
-    if df_new[0] == 0 :
+    if df_new['Predicted'] == 0 :
         st.write('balon mengembang')
     else:
         st.write('balon tidak mengembang')
