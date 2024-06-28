@@ -57,6 +57,9 @@ if selected_color and selected_size and selected_act and selected_age:
 
     # Tampilkan hasil prediksi
     st.subheader("Hasil Prediksi")
+    st.write('note :')
+    st.write('1. Jika tabel Predicted menyatakan F maka balon akan mengembang')
+    st.write('2. jika tabel Predicted menyatakan T maka balon tidak mengembang')
     st.write(df_new[['color', 'size', 'act', 'age', 'Predicted']])
 
     # Evaluasi model pada set pengujian (opsional jika Anda ingin menampilkan akurasi)
@@ -64,9 +67,6 @@ if selected_color and selected_size and selected_act and selected_age:
     y = df_data['inflated']
     y_pred = model_rfc.predict(X)
     accuracy = accuracy_score(y, y_pred)
-    st.write('note :')
-    st.write('1. Jika tabel Predicted menyatakan F maka balon akan mengembang')
-    st.write('2. jika tabel Predicted menyatakan T maka balon tidak mengembang')
     st.write(f"Akurasi pada seluruh dataset: {accuracy * 100:.2f}%")
     st.link_button('My Github','https://github.com/dilaa3011/pendat')
 else:
